@@ -1,0 +1,36 @@
+﻿@model SkettySchool.Models.TeacherModel
+@{
+    ViewBag.Title = "Add Teacher";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<h2>Teacher Page</h2>
+
+ <form asp-action="AddTeacher">
+
+      
+
+    <div class="form-group">
+                <label class="control-label">First Name</label>
+                <input asp-for="@Model.FirstName" class="form-control" />
+                <span asp-validation-for="@Model.FirstName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+                <label class="control-label">Last Name</label>
+                <input asp-for="@Model.LastName" class="form-control" />
+                <span asp-validation-for="@Model.LastName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+                <label class="control-label">User Type</label>
+                <input asp-for="@Model.UserType" class="form-control" />
+                <span asp-validation-for="@Model.UserType" class="text-danger"></span>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Save</button>
+ 
+</form>
+
+
+

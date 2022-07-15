@@ -1,0 +1,30 @@
+﻿@model List<SkettySchool.Models.ClassModel>
+
+@{
+    ViewData["Title"] = "Class";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Class</h1>
+
+<div><b>Class Information</b><br /></div>  
+<table class="table table-bordered table-responsive table-hover">  
+    <tr>  
+        <th>Class Id </th>  
+        <th>Class Name </th>  
+        <th>Class Description </th>  
+    </tr>  
+    @foreach (var t in Model)  
+    {  
+        <tr>  
+            <td>@t.ClassId</td>  
+            <td>@t.ClassName</td>  
+            <td>@t.ClassDescription</td>   
+  
+        </tr>  
+    }  
+</table>  
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

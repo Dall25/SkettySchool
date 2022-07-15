@@ -1,0 +1,36 @@
+﻿@model List<SkettySchool.Models.PupilModel>
+
+@{
+    ViewData["Title"] = "Pupil";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Pupil</h1>
+
+<div><b>Pupil Information</b><br /></div>  
+<table class="table table-bordered table-responsive table-hover">  
+    <tr>  
+        <th>Pupil Id </th>  
+        <th>First Name </th>  
+        <th>Last Name </th>  
+        <th>Date Of Birth </th> 
+        <th>School Year </th> 
+        <th>User Type</th>    
+    </tr>  
+    @foreach (var t in Model)  
+    {  
+        <tr>  
+            <td>@t.PupilId</td>  
+            <td>@t.FirstName</td>  
+            <td>@t.LastName</td>
+            <td>@t.DateOfBirth</td> 
+            <td>@t.SchoolYear</td>  
+            <td>@t.UserType</td>    
+  
+        </tr>  
+    }  
+</table>  
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
